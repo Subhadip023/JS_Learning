@@ -28,6 +28,6 @@ const dict = {
 }
 
 console.log(dict['yakka'])
-cons number ={
+const number ={
 
 }

@@ -1,3 +1,5 @@
+// date - 02/02/2024
+
 function addthreeNumbers(a,b,c){
     return a+b+c;
 }
