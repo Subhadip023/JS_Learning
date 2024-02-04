@@ -12,9 +12,8 @@
 // console.log(sentence)
 
 //Escape Sequence Charecters 
-let fruit='Bana\"an';
-console.log(fruit)
-
+// let fruit='Bana\"an';
+// console.log(fruit)
 //  \n used to new line 
 // \t used to tab
 // \r carrying return
