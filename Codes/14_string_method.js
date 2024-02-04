@@ -22,3 +22,6 @@ let friend2="   megha   ";
 
 console.log(friend2)
 console.log(friend2.trim())
+
+// string immutable
+
