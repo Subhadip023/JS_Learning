@@ -165,3 +165,7 @@ hr{
    width: 150px;
 }
 
+::-webkit-scrollbar {
+    display: none;
+  }
+
