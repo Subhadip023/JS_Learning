@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Water Gun Game </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .contaner{
+            background: #000;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            /* justify-content:  */
+                       flex-wrap: wrap;
+                       gap: 20px;
+           
+        }
+        .user{
+            /* margin-top: 100px; */
+            background: white;
+            height: 50vh;
+            width: 40vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 10px;
+        } 
+         img{
+            width: 200px;
+            height: 200px;
+            border: 5px solid aqua; 
+            border-radius: 20px;
+        }
+        .user_choicen_img{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+height: 300px;
+width: 300px;
+background: #000;
+        }
+        button{
+            background: #5a5a5a;
+            height: 50px;
+            width: 100px;
+            border-radius: 10px;
+        }
+        .User_btn{
+            width: 100%;
+            height: 60px;
+            background: green;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            gap: 20px;
+        }
+       
+        .computer{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+height: 300px;
+width: 300px;
+background: #000;
+        }
+        .score{
+            background: greenyellow;
+            width: 100vw;
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="contaner">
+        <div class="user">
+            <h2>Computer choice</h2>
+            <div class=" computer">
+                <img src="./images/snake.png" alt="">
+            </div>
+<div class="User_btn">
+    <!-- <button class="btn" onclick="game('sanke')">Snake</button>
+<button onclick="game('water')">Water</button>
+<button onclick="game('gun_user')">Gun</button> -->
+</div>
+
+        </div>
+        <!-- <img src="./images/57b795a65dd8857ce31f3c0596ff0667.jpg" alt=""> -->
+
+        
+        <div class="user">
+            <h2>Your choice</h2>
+            <div class="user_choicen_img">
+                <img src="./images/snake.png" alt="">
+            </div>
+<div class="User_btn">
+    <button class="btn" onclick="game('sanke')">Snake</button>
+<button onclick="game('water')">Water</button>
+<button onclick="game('gun_user')">Gun</button>
+</div>
+
+        </div>
+       <div class="score">
+
+       </div>
+    </div>
+<script>
+    let user_image=document.querySelector('.user_choicen_img');
+    let computer_img=document.querySelector('.computer');
+        function game(mas){
+            const choice=["sanke",'water','gun'];
+
+            let computer_choice=choice[Math.floor(Math.random()*3)];
+
+            user_image.innerHTML= `<img src="./images/${mas}.jpg" alt="">`
+            computer_img.innerHTML= `<img src="./images/${computer_choice}.jpg" alt="">`
+
+        }
+</script>
+<!-- 
+    <script>
+        const choice=["sanke",'water','gun'];
+        let user_point=0;
+        let computer_point=0;
+do{
+        let user_choice=prompt("enter Your choice S or W or G").charAt(0);
+        let computer_choice=choice[Math.floor(Math.random()*3)].charAt(0);
+        if(user_choice==="g"&&computer_choice==="s"){
+            alert("You win "+'your choice '+user_choice +" and computer choice "+computer_choice);
+            user_point++;
+
+        }
+        else if(user_choice==="s"&&computer_choice==="w"){
+            alert("You win "+'your choice '+user_choice +" and computer choice "+computer_choice);
+            user_point++;
+
+        }
+        else if (user_choice==="w"&&computer_choice==="g"){
+            alert("You win "+'your choice '+user_choice +" and computer choice "+computer_choice);
+            user_point++;
+
+        }
+        else if(user_choice===computer_choice){
+            alert("choice match ")
+        }
+        else{
+            alert("Computer win "+'your choice '+user_choice +" and computer choice "+computer_choice);
+            computer_point++;
+
+        }
+}while(confirm("Your Score : "+user_point+"\nComputer Score :"+computer_point+"\n"+"Do You want to contine ..>>>"));
+
+document.write("Your Score : "+user_point+"\nComputer Score :"+computer_point);
+if(user_point>computer_point){
+    document.write("You Win");
+}
+else if(user_point<computer_point){
+    document.write("\nComputer Win");
+}
+else{
+    document.write("Dreow")
+}
+        
+    </script> -->
+</body>
+</html>
