@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Lisener</title>
+</head>
+<body>
+  <div>
+    <button id="btn">
+        Click Me
+    </button>
+  </div>  
+
+  <script>
+    const btn=document.getElementById('btn');
+    btn.addEventListener("click",function (){
+        alert("hellow world 1!")
+    }) 
+
+    btn.addEventListener("click",function (){
+        alert("hellow world 2!")
+    })
+
+    let a=prompt('What is your Favorite Number ?');
+    if(a==2){
+        btn.removeEventListener("click",function(e){
+            alert("re")
+        })
+    }
+  </script>
+</body>
+</html>

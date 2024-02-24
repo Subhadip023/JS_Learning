@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch 8 ps</title>
+</head>
+<body>
+    <button onclick="alert('hi')">hi</button>
+    <button onclick="alert('you')">you</button>
+    <button onclick="alert('are')">are</button>
+    <button onclick="alert('good')">good</button>
+
+    <a href="https://www.google.com"><button>google</button></a>
+    <a href="https://www.facebook.com"><button>facebook</button></a>
+    <a href="https://www.tweeter.com"><button>tweeter</button></a>
+
+<script>
+    setInterval(async function(){
+     fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
+    },6000)
+</script>
+</body>
+
+
+</html>
