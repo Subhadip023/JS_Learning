@@ -1,12 +1,11 @@
-// async await >> promise chains >> Callback hell 
+// async await >> promise chains >> Callback hell
 
-// exapmle of sync programing 
+// exapmle of sync programing
 // console.log("one")
 // console.log("two")
 // console.log("three")
 
-
-// exapmle of async programing 
+// exapmle of async programing
 
 // console.log("one")
 // console.log("two")
@@ -17,22 +16,32 @@
 // console.log("three")
 // console.log("four")
 
+//  Example of call back
+// const sum =(a,b)=>{
+//     return a+b;
+// }
+// const sub =(a,b)=>{
+//     return a-b;
+// }
+// const mul =(a,b)=>{
+//     return a*b;
+// }
 
-//  Example of call back 
-const sum =(a,b)=>{
-    return a+b;
-}
-const sub =(a,b)=>{
-    return a-b;
-}
-const mul =(a,b)=>{
-    return a*b;
+// function calculater(a,b,opration){
+//     return opration(a,b)
+// }
+
+// console.log(calculater(12,6,sum))
+// console.log(calculater(12,6,sub))
+// console.log(calculater(12,6,mul))
+
+// Callback hell
+function getData(dataId) {
+  setTimeout(() => {
+    console.log("data", dataId);
+  }, 2000);
 }
 
-function calculater(a,b,opration){
-    return opration(a,b)
-}
-
-console.log(calculater(12,6,sum))
-console.log(calculater(12,6,sub))
-console.log(calculater(12,6,mul))
+getData(200);
+getData(300);
+getData(400);
