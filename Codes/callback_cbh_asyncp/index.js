@@ -36,12 +36,16 @@
 // console.log(calculater(12,6,mul))
 
 // Callback hell
-function getData(dataId) {
+function getData(dataId,getNextData) {
   setTimeout(() => {
     console.log("data", dataId);
-  }, 2000);
+    if (getNextData) {
+      getNextData();
+    }
+  }, 2000);// 2000 menas 2 see 
 }
 
-getData(200);
-getData(300);
-getData(400);
+getData(1,()=>{
+  getData(2);
+});
+
